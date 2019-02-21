@@ -1,0 +1,64 @@
+{
+  "name": "reservationapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start --skipflow",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "prebuild": "node node_modules/.bin/rimraf build",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/react-native-elements": "^0.18.0",
+    "@types/react-native-vector-icons": "^4.6.4",
+    "@types/react-navigation": "^3.0.3",
+    "apollo-boost": "^0.1.28",
+    "apollo-client": "^2.4.13",
+    "graphql": "^14.1.1",
+    "moment": "^2.24.0",
+    "native-base": "2.11.0",
+    "prop-types": "15.6.1",
+    "react": "^16.8.2",
+    "react-apollo": "^2.4.1",
+    "react-native": "^0.58.5",
+    "react-native-config": "^0.11.7",
+    "react-native-elements": "^1.0.0",
+    "react-native-gesture-handler": "^1.0.15",
+    "react-native-modal-datetime-picker": "^6.0.0",
+    "react-native-vector-icons": "6.3.0",
+    "react-navigation": "3.3.0",
+    "react-timer-mixin": "^0.13.4",
+    "typed-native-base": "^0.0.4"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.7",
+    "@types/jest": "^24.0.6",
+    "@types/react": "^16.8.3",
+    "@types/react-native": "^0.57.37",
+    "@types/react-test-renderer": "^16.8.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.52.0",
+    "react-test-renderer": "16.6.3",
+    "tslint": "^5.12.1",
+    "types": "^0.1.1",
+    "typescript": "^3.3.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
